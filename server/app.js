@@ -4,9 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-//aby pozbyc sie bledu CORS
-var cors = require('cors')
-app.use(cors())
+
 
 
 var indexRouter = require('./routes/index');
@@ -15,7 +13,9 @@ var movieRouter = require('./routes/movie');
 
 var app = express();
 
-
+//aby pozbyc sie bledu CORS
+var cors = require('cors')
+app.use(cors())
 
 
 // view engine setup

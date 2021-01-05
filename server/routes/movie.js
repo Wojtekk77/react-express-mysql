@@ -11,9 +11,9 @@ const db = mysql.createPool({
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
-    const sqlInsert = "INSERT INTO movie_reviews (movieName, movieReview) VALUES ('incepcionexpres','good express')";
+    const sqlInsert = "SELECT * FROM movie_reviews;";
     db.query(sqlInsert, (err, result) => {
-        res.send("hello pred, we are into db.query()")
+        res.send(result)
     });
     // res.send('respond with a resource2123sda12');
 });
